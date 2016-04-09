@@ -1,107 +1,62 @@
-using System;
-        using System.Collections.Generic;
-        using System.Linq;
+package com.company;
 
-        namespace DealOrNoDeal
-        {
-class DealOrNoDeal
-{
+import java.util.*;
+
+public class DealOrNoDeal {
+    static Scanner scan = new Scanner(System.in);
     static int tempProverka = 0;
     public static int box1;
     static int boxChoice = 0;
-    static string removeValue = "";
-    static string[] valuesArray = new string[] { "1", "5", "10", "20", "50", "100", "200", "300", "500", "750", "1000", "2500", "5000", "7500", "10000", "12500", "15000", "25000", "50000", "75000", "100000" };
-    static string[] boxArray = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21" };
+    static String removeValue = "";
+    static String[] valuesArray = new String[]{"1", "5", "10", "20", "50", "100", "200", "300", "500", "750", "1000", "2500", "5000", "7500", "10000", "12500", "15000", "25000", "50000", "75000", "100000"};
+    static String[] boxArray = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"};
     static int average = 0;
     static int control = 0;
-    static ConsoleKeyInfo exitChar = new ConsoleKeyInfo();
 
-    public static void Game1(int index3, Dictionary<int, string> boxes)
-    {
-        if (tempProverka == 0)
-        {
-
+    public static void Game1(int index3, TreeMap<Integer, String> boxes) {
+        if (tempProverka == 0) {
             Printboxes(boxArray);
-
-            Console.WriteLine("{0,52}", "- Now you must open 2 boxes! -");
-            Console.WriteLine();
+            System.out.printf("Now you must open 2 boxes! -\n");
 
             OpenBox(index3, boxes, boxArray);
             Printboxes(boxArray);
 
             OpenBox(index3, boxes, boxArray);
             Printboxes(boxArray);
-
             average = Offer(boxes);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("{0,55}", "DEAL             or             NO DEAL?");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("{0,63}", "Press [1] for Deal         :         Press [0] for No Deal");
-            Console.Write("{0,33}", " ");
-        }
-        else
-        {
-            Console.WriteLine();
-            Console.WriteLine("{0,63}", "Press [1] for Deal         :         Press [0] for No Deal");
-            Console.Write("{0,33}", " ");
+
+            System.out.println();
+            System.out.println();
+            System.out.println("DEAL OR NO DEAL");
+            System.out.println("Type 1 for DEAL or 0 for NO DEAL");
+            System.out.printf("                               ");
+        } else {
+            System.out.println();
+            System.out.println("Type 1 for DEAL or 0 for NO DEAL");
+            System.out.printf("                               ");
             tempProverka = 0;
         }
+        int decision = scan.nextInt();
 
-
-        ConsoleKeyInfo decision = Console.ReadKey();
-
-
-        if (decision.KeyChar == '1')
-        {
-
-            Console.Clear();
-
-            Console.WriteLine("\n\n");
-            Console.WriteLine("{0,47}", "You have taken the Deal!");
-            Console.WriteLine("\n\n\n\n\n");
-            Console.WriteLine("{0,36}{1}$  **", "**   You WON ", average);
-            Console.WriteLine("\n\n\n\n\n");
-            Console.WriteLine("{0,48}", "   * Congratulations!!! *   ");
-            Console.Write("\n\n\n\n\n\n\n                         ");
-            exitChar = Console.ReadKey();
-            Environment.Exit(0);
-
-        }
-
-        else if (decision.KeyChar == '0')
-        {
-            Console.Clear();
-            Console.WriteLine("\r___________________________________________________________________");
-            Console.WriteLine("\n{0,34}\n", "*");
-            Console.WriteLine("{0,45}", "-You refused the offer!-");
-
-        }
-
-
-        else
-        {
-
-            Console.WriteLine("\n\n");
-            Console.WriteLine("{0,48}", "Incorrect Input!");
-            Console.WriteLine("\n\n");
+        if (decision == 1) {
+            System.out.println("You have taken the DEAL.");
+            System.out.printf("You have won %d dollars.", average);
+            System.out.println("CONGRATULATIONS!!!");
+        } else if (decision == 0) {
+            System.out.println("You have refused the offer.");
+        } else {
+            System.out.println("Incorect input");
             tempProverka = 1;
             Game(index3, boxes);
         }
     }
-    public static void Game(int index3, Dictionary<int, string> boxes)
-    {
 
-
-        if (tempProverka == 0)
-        {
-
+    public static void Game(int index3, TreeMap<Integer, String> boxes) {
+        if (tempProverka == 0) {
             Printboxes(boxArray);
 
-            Console.WriteLine("{0,49}", "- Now you must open 3 boxes! -");
-            Console.WriteLine();
-
+            System.out.println("You must open 3 boxes");
+            System.out.println();
             OpenBox(index3, boxes, boxArray);
             Printboxes(boxArray);
 
@@ -112,89 +67,43 @@ class DealOrNoDeal
 
             OpenBox(index3, boxes, boxArray);
             Printboxes(boxArray);
-
             average = Offer(boxes);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("{0,55}", "DEAL             or             NO DEAL?");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("{0,63}", "Press [1] for Deal         :         Press [0] for No Deal");
-            Console.Write("{0,33}", " ");
 
-        }
-        else
-        {
-            Console.WriteLine();
-            Console.WriteLine("{0,63}", "Press [1] for Deal         :         Press [0] for No Deal");
-            Console.Write("{0,33}", " ");
+            System.out.println();
+            System.out.println();
+            System.out.println("DEAL OR NO DEAL");
+            System.out.println("Type 1 for DEAL or 0 for NO DEAL");
+            System.out.printf("                               ");
+        } else {
+            System.out.println();
+            System.out.println("Type 1 for DEAL or 0 for NO DEAL");
+            System.out.printf("                               ");
             tempProverka = 0;
         }
+        int decision = scan.nextInt();
 
-
-        ConsoleKeyInfo decision = Console.ReadKey();
-
-
-        if (decision.KeyChar == '1')
-        {
-            Console.Clear();
-
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-            Console.WriteLine("\n\n");
-            Console.WriteLine("{0,47}", "You have taken the Deal!");
-            Console.WriteLine("\n\n\n\n\n");
-            Console.WriteLine("{0,36}{1}$  **", "**   You WON ", average);
-            Console.WriteLine("\n\n\n\n\n");
-            Console.WriteLine("{0,48}", "   * Congratulations!!! *   ");
-            Console.Write("\n\n\n\n\n\n\n                         ");
-            exitChar = Console.ReadKey();
-            Environment.Exit(0);
-
-        }
-
-        else if (decision.KeyChar == '0')
-        {
-
-            Console.Clear();
-
-            Console.WriteLine("\r___________________________________________________________________");
-            Console.WriteLine("\n{0,34}\n", "*");
-            Console.WriteLine("{0,47}", "-You refused the offer!-");
-            Console.WriteLine();
-            Console.WriteLine("{0,46}", "-The game continues!-");
-            Console.WriteLine("\n{0,34}\n", "*");
-        }
-
-
-        else
-        {
-
-            Console.WriteLine("\n\n");
-            Console.WriteLine("{0,48}","Incorrect Input!");
-            Console.WriteLine("\n\n");
+        if (decision == 1) {
+            System.out.println("You have taken the DEAL.");
+            System.out.printf("You have won %d dollars.", average);
+            System.out.println("CONGRATULATIONS!!!");
+        } else if (decision == 0) {
+            System.out.println("You have refused the offer.");
+            System.out.println("The game continues");
+        } else {
+            System.out.println("Incorect input");
             tempProverka = 1;
             Game(index3, boxes);
-
         }
     }
-
-    public static int Offer(Dictionary<int,string> boxes)
-    {
+    public static int Offer(TreeMap<Integer,String> boxes){
         average = 0;
-
-        foreach (var item in boxes)
-        {
-            average += int.Parse(item.Value);
+        for(Map.Entry<Integer,String> entry : boxes.entrySet()) {
+            String key = entry.getValue();
+            average += Integer.parseInt(key);
         }
-
-        average /= boxes.Count();
-        Console.WriteLine("{0,48}", "*--Time to call the banker!--*");
-        Console.WriteLine("\n{0,33}\n{0,33}\n{0,33}\n", "*" );
-        Console.WriteLine("{0,42}{1}$", "The bankers' offer is: ", average);
+        average /= boxes.size();
+        System.out.println("Time to call the banker");
+        System.out.printf("The banker's offer is: %d",average);
         return average;
     }
 
