@@ -401,11 +401,11 @@ class DealOrNoDeal
 
         catch (KeyNotFoundException)
         {
-            Console.WriteLine();
-            Console.WriteLine("Box already opened! ");
-            Console.WriteLine("Try Again!");
-            Console.WriteLine();
-            OpenBox(index3, boxes, boxArray);
+        System.out.println();
+        System.out.println("Box already opened! ");
+        System.out.println("Try Again!");
+        System.out.println();
+        OpenBox(index3, boxes, boxArray);
 
         }
 
@@ -421,44 +421,45 @@ class DealOrNoDeal
         Console.Clear();
 
         Game1(index3, boxes);
-        Console.WriteLine();
-        Console.WriteLine("{0,50}", "-The game continues!-");
-        Console.WriteLine("\n{0,40}\n", "*");
+        System.out.println();
+        System.out.printf("%50s\n", "-The game continues!-");
+        System.out.printf("\n%40s\n\n", "*");
         Console.Clear();
 
         Game1(index3, boxes);
 
-        Console.WriteLine();
-        Console.WriteLine("{0,37}", "Game Over");
-        Console.WriteLine();
-        Console.WriteLine("{0,46}", "That was the final offer");
-        Console.WriteLine();
-        Console.WriteLine("{0,51}", "Now let's see what is in your box!");
-        Console.WriteLine("\n{0,34}\n{0,34}\n{0,34}\n", "*");
+        System.out.println();
+        System.out.printf("%37s\n", "Game Over");
+        System.out.println();
+        System.out.printf("%46s\n", "That was the final offer");
+        System.out.println();
+        System.out.printf("%51s\n", "Now let's see what is in your box!");
+        System.out.printf("\n%34s\n%34s\n%34s\n\n", "*", "*", "*");
 
-        Console.WriteLine("{0,45}", "Press any key to open!");
-        Console.Write("{0,39}", " ");
+        System.out.printf("%45s%n", "Type 1 to open!");
+        System.out.printf("%39s", " ");
 
-        ConsoleKeyInfo finalChar = Console.ReadKey();
+        scan.nextInt();
 
         Console.Clear();
-        Console.WriteLine("\n\n\n\n\n\n");
-        Console.WriteLine("{0,43}", "Your box contains:");
+        System.out.printf("\n\n\n\n\n\n\n");
+        System.out.printf("%43s\n", "Your box contains:");
 
-        Console.WriteLine("\n\n\n");
+        System.out.printf("\n\n\n\n");
 
-        Console.WriteLine("\n{0,35}\n{0,35}\n{0,35}\n", ".");
-        Console.WriteLine();
-        Console.WriteLine();
+        System.out.printf("\n%35s\n%35s\n%35s\n\n", ".");
+        System.out.println();
+        System.out.println();
 
 
-        Console.WriteLine("{0,36} $", finalBoxValue);
+        System.out.printf("%36d\n", finalBoxValue);
 
-        Console.WriteLine();
-        Console.WriteLine();
-        Console.Write("\n\n\n\n\n\n\n                                     ");
-        exitChar = Console.ReadKey();
+        System.out.println();
+        System.out.println();
+        System.out.printf("\n\n\n\n\n\n\n                                     ");
+        System.out.println("Press Enter to exit");
+        scan.nextLine();
 
-    }
-}
-}
+        }
+        }
+        }
