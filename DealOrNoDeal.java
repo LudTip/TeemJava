@@ -254,57 +254,39 @@ public class DealOrNoDeal {
 
     }
 
-    static void Main()
-    {
-        Console.WindowHeight = 56;
-        Console.BufferWidth = Console.WindowWidth = 67;
-        Console.BufferHeight = 100;
-
+public static void main(String[] args) {
         int index3 = 0;
+        TreeMap<Integer,String> boxes = new TreeMap<>();
+        List<Integer> boxesList = new ArrayList<>(Arrays.asList
+                (1,5,10,20,50,100,200,300,500,750,1000,2500,5000,7500,10000,12500,15000,25000,50000,75000,100000));
+        Random rand = new Random();
 
+        for (int i = 0;i < boxesList.size();i++){
+            int index = rand.nextInt(boxesList.size());
+            int index2 = rand.nextInt(boxesList.size());
 
-
-        List<int> boxesList = new List<int>
-        {
-            1,5,10,20,50,100,200,300,500,750,1000,2500,5000,7500,10000,12500,15000,25000,50000,75000,100000
-        };
-        Random random = new Random();
-        for (int i = 0; i < boxesList.Count; i++)
-        {
-            int index = random.Next(0, boxesList.Count);
-            int index2 = random.Next(0, boxesList.Count);
-            int temp = boxesList[index2];
-            boxesList[index2] = boxesList[index];
-            boxesList[index] = temp;
-        }
-        Dictionary < int,string>boxes= new Dictionary<int, string>();
-
-        for (int i = 0; i < boxesList.Count; i++)
-        {
-            boxes[i] = boxesList[i].ToString();
+            int temp = boxesList.get(index2);
+            boxesList.set(index2,boxesList.get(index));
+            boxesList.set(index,temp);
         }
 
+        for(int i = 0; i < boxesList.size();i++){
+           boxes.values().add(boxesList.get(i).toString());
+        }
         Printboxes(boxArray);
-
-        Console.WriteLine();
-        Console.WriteLine("{0,47}", "- Time to choose Your Box! -");
-
+        System.out.println();
+        System.out.println("Time to choose a box!");
         int finalBoxValue = 0;
 
-        try
-        {
-
-            boxChoice = GetBox(index3);
-            finalBoxValue = int.Parse(boxes[boxChoice]);
+        try{
+            boxChoice = getBox(index3);
+            finalBoxValue = Integer.parseInt(boxes.);
             boxArray[boxChoice] = "Your Box";
-            Console.WriteLine();
-            Console.WriteLine("{0,41} {1}", "You choose box: ", boxChoice + 1);
-            Console.WriteLine("\n{0,34}\n", "*");
-            Console.WriteLine("{0,43}", "This is YOUR box.");
-            Console.WriteLine("{0,64}", "The value inside will be your final prize if no Deal is made!");
-            Console.WriteLine("\n\n{0,34}\n", "*");
-            Console.WriteLine();
-
+            System.out.println();
+            System.out.printf("You chose box: d%",boxChoice + 1);
+            System.out.println("This is your box.");
+            System.out.println("The value inside of it will be your final prize if no Deal is made");
+            System.out.println();
         }
 
         catch (KeyNotFoundException)
@@ -368,6 +350,5 @@ public class DealOrNoDeal {
         System.out.println("Press Enter to exit");
         scan.nextLine();
 
-        }
         }
         }
