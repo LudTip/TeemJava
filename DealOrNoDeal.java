@@ -280,7 +280,7 @@ public static void main(String[] args) {
 
         try{
             boxChoice = getBox(index3);
-            finalBoxValue = Integer.parseInt(boxes.);
+            finalBoxValue = Integer.parseInt(boxes.get(boxChoice));
             boxArray[boxChoice] = "Your Box";
             System.out.println();
             System.out.printf("You chose box: d%",boxChoice + 1);
