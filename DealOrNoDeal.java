@@ -1,4 +1,6 @@
 package com.company;
+import java.security.KeyException;
+import java.util.*;
 
 public class DealOrNoDeal {
     static Scanner scan = new Scanner(System.in);
