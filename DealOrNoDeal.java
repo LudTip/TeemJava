@@ -107,24 +107,23 @@ public class DealOrNoDeal {
         return average;
     }
 
-    public static void Printboxes(string[] boxarray)
-    {
+    public static void Printboxes (String[] boxarray){
 
-        Console.WriteLine("___________________________________________________________________");
-        Console.WriteLine();
-        Console.WriteLine("{0,-10}{1,25}{2,32}","[" + boxarray[0] + "]", "[" + boxarray[20] + "]", "[" + boxarray[10] + "]");
-        Console.WriteLine("{0,-10}{1,57}", "[" + boxarray[1] + "]", "[" + boxarray[11] + "]");
-        Console.WriteLine("{0,-10}{1,57}", "[" + boxarray[2] + "]", "[" + boxarray[12] + "]");
-        Console.WriteLine("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[3] + "]", valuesArray[0], valuesArray[5], valuesArray[10], valuesArray[15], "[" + boxarray[13] + "]");
-        Console.WriteLine("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[4] + "]", valuesArray[1], valuesArray[6], valuesArray[11], valuesArray[16], "[" + boxarray[14] + "]");
-        Console.WriteLine("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[5] + "]", valuesArray[2], valuesArray[7], valuesArray[12], valuesArray[17], "[" + boxarray[15] + "]");
-        Console.WriteLine("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[6] + "]", valuesArray[3], valuesArray[8], valuesArray[13], valuesArray[18], "[" + boxarray[16] + "]");
-        Console.WriteLine("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[7] + "]", valuesArray[4], valuesArray[9], valuesArray[14], valuesArray[19], "[" + boxarray[17] + "]");
-        Console.WriteLine("{0,-10}{1,57}", "[" + boxarray[8] + "]", "[" + boxarray[18] + "]");
-        Console.WriteLine("{0,-10}{1,26}{2,31}", "[" + boxarray[9] + "]", valuesArray[20], "[" + boxarray[19] + "]");
-        Console.WriteLine();
-        Console.WriteLine("___________________________________________________________________");
-    }
+            System.out.println("___________________________________________________________________");
+            System.out.println();
+            System.out.println("{0,-10}{1,25}{2,32}", "[" + boxarray[0] + "]", "[" + boxarray[20] + "]", "[" + boxarray[10] + "]");
+            System.out.println("{0,-10}{1,57}", "[" + boxarray[1] + "]", "[" + boxarray[11] + "]");
+            System.out.println("{0,-10}{1,57}", "[" + boxarray[2] + "]", "[" + boxarray[12] + "]");
+            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[3] + "]", valuesArray[0], valuesArray[5], valuesArray[10], valuesArray[15], "[" + boxarray[13] + "]");
+            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[4] + "]", valuesArray[1], valuesArray[6], valuesArray[11], valuesArray[16], "[" + boxarray[14] + "]");
+            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[5] + "]", valuesArray[2], valuesArray[7], valuesArray[12], valuesArray[17], "[" + boxarray[15] + "]");
+            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[6] + "]", valuesArray[3], valuesArray[8], valuesArray[13], valuesArray[18], "[" + boxarray[16] + "]");
+            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[7] + "]", valuesArray[4], valuesArray[9], valuesArray[14], valuesArray[19], "[" + boxarray[17] + "]");
+            System.out.println("{0,-10}{1,57}", "[" + boxarray[8] + "]", "[" + boxarray[18] + "]");
+            System.out.println("{0,-10}{1,26}{2,31}", "[" + boxarray[9] + "]", valuesArray[20], "[" + boxarray[19] + "]");
+            System.out.println();
+            System.out.println("___________________________________________________________________");
+        }
 
 
     public static int GetBox(int index3)
@@ -132,14 +131,14 @@ public class DealOrNoDeal {
         if (control == 0)
         {
 
-            Console.WriteLine("\n{0,56}\n", "* * * * * * * * * * * * * * * * * * * * * * *");
-            Console.Write("{0,46}", "Pick a box from 1 to 21: ");
+            System.out.println("\n{0,56}\n", "* * * * * * * * * * * * * * * * * * * * * * *");
+            System.out.println("{0,46}", "Pick a box from 1 to 21: ");
             control++;
         }
         else
         {
-            Console.WriteLine();
-            Console.Write("{0,47}", "Choose a box to open:  ");
+            System.out.println();
+            System.out.println("{0,47}", "Choose a box to open:  ");
         }
 
         while (true)
@@ -147,16 +146,16 @@ public class DealOrNoDeal {
             try
             {
 
-                index3 = int.Parse(Console.ReadLine());
+                index3 = Integer.parseInt(scan.nextLine());
                 break;
 
             }
             catch (FormatException)
             {
                 index3 = 100;
-                Console.WriteLine("{0,42}", "Invalid input! ");
-                Console.WriteLine("{0,45}", "Enter box number again!");
-                Console.Write("{0,33}", " ");
+                System.out.println("{0,42}", "Invalid input! ");
+                System.out.println("{0,45}", "Enter box number again!");
+                System.out.print("{0,33}", " ");
             }
 
         }
@@ -165,25 +164,25 @@ public class DealOrNoDeal {
         int proverka = index3;
         while ((proverka < 0) || (proverka > 20))
         {
-            Console.WriteLine("{0,42}", "Invalid input! ");
-            Console.WriteLine("{0,45}", "Enter box number again!");
-            Console.Write("{0,33}", " ");
+            System.out.println("{0,42}", "Invalid input! ");
+            System.out.println("{0,45}", "Enter box number again!");
+            System.out.print("{0,33}", " ");
 
             while (true)
             {
                 try
                 {
 
-                    index3 = int.Parse(Console.ReadLine());
+                    index3 = Integer.parseInt(scan.nextLine());
                     break;
 
                 }
                 catch (FormatException)
                 {
                     index3 = 100;
-                    Console.WriteLine("{0,42}", "Invalid input! ");
-                    Console.WriteLine("{0,45}", "Enter box number again!");
-                    Console.Write("{0,33}", " ");
+                    System.out.println("{0,42}", "Invalid input! ");
+                    System.out.println("{0,45}", "Enter box number again!");
+                    System.out.print("{0,33}", " ");
 
                 }
             }
