@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.*;
-
 public class DealOrNoDeal {
     static Scanner scan = new Scanner(System.in);
     static int tempProverka = 0;
@@ -95,63 +93,56 @@ public class DealOrNoDeal {
             Game(index3, boxes);
         }
     }
-    public static int Offer(TreeMap<Integer,String> boxes){
+
+    public static int Offer(TreeMap<Integer, String> boxes) {
         average = 0;
-        for(Map.Entry<Integer,String> entry : boxes.entrySet()) {
+        for (Map.Entry<Integer, String> entry : boxes.entrySet()) {
             String key = entry.getValue();
             average += Integer.parseInt(key);
         }
         average /= boxes.size();
         System.out.println("Time to call the banker");
-        System.out.printf("The banker's offer is: %d",average);
+        System.out.printf("The banker's offer is: %d", average);
         return average;
     }
 
-    public static void Printboxes (String[] boxarray){
+    public static void Printboxes(String[] boxarray) {
 
-            System.out.println("___________________________________________________________________");
-            System.out.println();
-            System.out.println("{0,-10}{1,25}{2,32}", "[" + boxarray[0] + "]", "[" + boxarray[20] + "]", "[" + boxarray[10] + "]");
-            System.out.println("{0,-10}{1,57}", "[" + boxarray[1] + "]", "[" + boxarray[11] + "]");
-            System.out.println("{0,-10}{1,57}", "[" + boxarray[2] + "]", "[" + boxarray[12] + "]");
-            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[3] + "]", valuesArray[0], valuesArray[5], valuesArray[10], valuesArray[15], "[" + boxarray[13] + "]");
-            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[4] + "]", valuesArray[1], valuesArray[6], valuesArray[11], valuesArray[16], "[" + boxarray[14] + "]");
-            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[5] + "]", valuesArray[2], valuesArray[7], valuesArray[12], valuesArray[17], "[" + boxarray[15] + "]");
-            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[6] + "]", valuesArray[3], valuesArray[8], valuesArray[13], valuesArray[18], "[" + boxarray[16] + "]");
-            System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[7] + "]", valuesArray[4], valuesArray[9], valuesArray[14], valuesArray[19], "[" + boxarray[17] + "]");
-            System.out.println("{0,-10}{1,57}", "[" + boxarray[8] + "]", "[" + boxarray[18] + "]");
-            System.out.println("{0,-10}{1,26}{2,31}", "[" + boxarray[9] + "]", valuesArray[20], "[" + boxarray[19] + "]");
-            System.out.println();
-            System.out.println("___________________________________________________________________");
-        }
+        System.out.println("___________________________________________________________________");
+        System.out.println();
+        System.out.println("{0,-10}{1,25}{2,32}", "[" + boxarray[0] + "]", "[" + boxarray[20] + "]", "[" + boxarray[10] + "]");
+        System.out.println("{0,-10}{1,57}", "[" + boxarray[1] + "]", "[" + boxarray[11] + "]");
+        System.out.println("{0,-10}{1,57}", "[" + boxarray[2] + "]", "[" + boxarray[12] + "]");
+        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[3] + "]", valuesArray[0], valuesArray[5], valuesArray[10], valuesArray[15], "[" + boxarray[13] + "]");
+        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[4] + "]", valuesArray[1], valuesArray[6], valuesArray[11], valuesArray[16], "[" + boxarray[14] + "]");
+        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[5] + "]", valuesArray[2], valuesArray[7], valuesArray[12], valuesArray[17], "[" + boxarray[15] + "]");
+        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[6] + "]", valuesArray[3], valuesArray[8], valuesArray[13], valuesArray[18], "[" + boxarray[16] + "]");
+        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[7] + "]", valuesArray[4], valuesArray[9], valuesArray[14], valuesArray[19], "[" + boxarray[17] + "]");
+        System.out.println("{0,-10}{1,57}", "[" + boxarray[8] + "]", "[" + boxarray[18] + "]");
+        System.out.println("{0,-10}{1,26}{2,31}", "[" + boxarray[9] + "]", valuesArray[20], "[" + boxarray[19] + "]");
+        System.out.println();
+        System.out.println("___________________________________________________________________");
+    }
 
 
-    public static int GetBox(int index3)
-    {
-        if (control == 0)
-        {
+    public static int GetBox(int index3) {
+        if (control == 0) {
 
             System.out.println("\n{0,56}\n", "* * * * * * * * * * * * * * * * * * * * * * *");
             System.out.println("{0,46}", "Pick a box from 1 to 21: ");
             control++;
-        }
-        else
-        {
+        } else {
             System.out.println();
             System.out.println("{0,47}", "Choose a box to open:  ");
         }
 
-        while (true)
-        {
-            try
-            {
+        while (true) {
+            try {
 
                 index3 = Integer.parseInt(scan.nextLine());
                 break;
 
-            }
-            catch (FormatException)
-            {
+            } catch (FormatException) {
                 index3 = 100;
                 System.out.println("{0,42}", "Invalid input! ");
                 System.out.println("{0,45}", "Enter box number again!");
@@ -162,23 +153,18 @@ public class DealOrNoDeal {
         index3--;
 
         int proverka = index3;
-        while ((proverka < 0) || (proverka > 20))
-        {
+        while ((proverka < 0) || (proverka > 20)) {
             System.out.println("{0,42}", "Invalid input! ");
             System.out.println("{0,45}", "Enter box number again!");
             System.out.print("{0,33}", " ");
 
-            while (true)
-            {
-                try
-                {
+            while (true) {
+                try {
 
                     index3 = Integer.parseInt(scan.nextLine());
                     break;
 
-                }
-                catch (FormatException)
-                {
+                } catch (FormatException) {
                     index3 = 100;
                     System.out.println("{0,42}", "Invalid input! ");
                     System.out.println("{0,45}", "Enter box number again!");
@@ -191,111 +177,78 @@ public class DealOrNoDeal {
         }
         return index3;
     }
-    public static void OpenBox(int index3,Dictionary<int,string>boxes, string[] boxarray)
-    {
+
+    public static void OpenBox(int index3, HashMap<Integer, String> boxes, String[] boxarray) {
         int box1 = 0;
-
-
-
-        try
-        {
-
+        try {
             box1 = GetBox(index3);
-            if (boxChoice == box1)
-            {
-                Console.WriteLine("\n{0,34}\n", "*");
-                Console.WriteLine("{0,46}", "You cannot open your box!");
-                Console.WriteLine("\n{0,34}\n", "*");
+            if (boxChoice == box1) {
+                System.out.printf("\n%s34\n", "*");
+                System.out.printf("%s46", "You cannot open your box!");
+                System.out.printf("\n%s34\n", "*");
                 OpenBox(index3, boxes, boxarray);
             }
 
-            if (boxChoice != box1)
-            {
+            if (boxChoice != box1) {
                 boxarray[box1] = "x";
-                Console.WriteLine();
-                Console.WriteLine("{0,37}{1} :   {2}$", "You opened box ", box1 + 1, boxes[box1]);
-                removeValue = boxes[box1];
+                System.out.println();
+                System.out.printf("%s37%d :   %d$", "You opened box ", box1 + 1, boxes.get(box1));
+                removeValue = boxes.get(box1);
             }
 
-
-            for (int i = 0; i < valuesArray.Length; i++)
-            {
-
-                if (removeValue == valuesArray[i])
-                {
+            for (int i = 0; i < valuesArray.length; i++) {
+                if (removeValue == valuesArray[i]) {
                     valuesArray[i] = "";
-                    //valuesArray[i] = "[XXX]";
+                    ////valuesArray[i] = "[XXX]";
                 }
             }
-
-            boxes.Remove(box1);
-
+            boxes.remove(box1);
+        } catch (KeyException ke) {
+            System.out.printf("%s46", "Invalid input!");
+            System.out.printf("%s46", "Enter box number again!");
+            System.out.println();
         }
-
-        catch (KeyNotFoundException)
-        {
-
-            Console.WriteLine("\n{0,34}\n", "*");
-            Console.WriteLine("{0,43}", "Box already opened! ");
-            Console.WriteLine("{0,38}", "Try Again!");
-            Console.WriteLine("\n{0,34}\n", "*");
-            OpenBox(index3,boxes,boxarray);
-
-        }
-
-        catch (FormatException)
-        {
-
-            Console.WriteLine("{0,46}", "Invalid input! ");
-            Console.WriteLine("{0,49}", "Enter box number again!");
-
-            Console.WriteLine();
-        }
-
     }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         int index3 = 0;
-        TreeMap<Integer,String> boxes = new TreeMap<>();
+        TreeMap<Integer, String> boxes = new TreeMap<>();
         List<Integer> boxesList = new ArrayList<>(Arrays.asList
-                (1,5,10,20,50,100,200,300,500,750,1000,2500,5000,7500,10000,12500,15000,25000,50000,75000,100000));
+                (1, 5, 10, 20, 50, 100, 200, 300, 500, 750, 1000, 2500, 5000, 7500, 10000, 12500, 15000, 25000, 50000, 75000, 100000));
         Random rand = new Random();
 
-        for (int i = 0;i < boxesList.size();i++){
+        for (int i = 0; i < boxesList.size(); i++) {
             int index = rand.nextInt(boxesList.size());
             int index2 = rand.nextInt(boxesList.size());
 
             int temp = boxesList.get(index2);
-            boxesList.set(index2,boxesList.get(index));
-            boxesList.set(index,temp);
+            boxesList.set(index2, boxesList.get(index));
+            boxesList.set(index, temp);
         }
 
-        for(int i = 0; i < boxesList.size();i++){
-           boxes.values().add(boxesList.get(i).toString());
+        for (int i = 0; i < boxesList.size(); i++) {
+            boxes.values().add(boxesList.get(i).toString());
         }
         Printboxes(boxArray);
         System.out.println();
         System.out.println("Time to choose a box!");
         int finalBoxValue = 0;
 
-        try{
+        try {
             boxChoice = getBox(index3);
             finalBoxValue = Integer.parseInt(boxes.get(boxChoice));
             boxArray[boxChoice] = "Your Box";
             System.out.println();
-            System.out.printf("You chose box: d%",boxChoice + 1);
+            System.out.printf("You chose box: d%", boxChoice + 1);
             System.out.println("This is your box.");
             System.out.println("The value inside of it will be your final prize if no Deal is made");
             System.out.println();
-        }
-
-        catch (KeyNotFoundException)
-        {
-        System.out.println();
-        System.out.println("Box already opened! ");
-        System.out.println("Try Again!");
-        System.out.println();
-        OpenBox(index3, boxes, boxArray);
+        } catch (KeyNotFoundException) {
+            System.out.println();
+            System.out.println("Box already opened! ");
+            System.out.println("Try Again!");
+            System.out.println();
+            OpenBox(index3, boxes, boxArray);
 
         }
 
@@ -350,5 +303,5 @@ public static void main(String[] args) {
         System.out.println("Press Enter to exit");
         scan.nextLine();
 
-        }
-        }
+    }
+}
