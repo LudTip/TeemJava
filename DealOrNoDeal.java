@@ -239,7 +239,7 @@ public class DealOrNoDeal {
 
         try {
             boxChoice = GetBox(index3);
-            finalBoxValue = Integer.parseInt(boxes.get(boxChoice));
+            finalBoxValue = Integer.parseInt(boxes.get(boxChoice+1));
             boxArray[boxChoice] = "Your Box";
             System.out.println();
             System.out.printf("You chose box: %d.", boxChoice + 1);
