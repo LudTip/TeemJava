@@ -43,6 +43,7 @@ public class DealOrNoDeal {
             System.out.println("You have taken the DEAL.");
             System.out.printf("You have won %d dollars.", average);
             System.out.println("CONGRATULATIONS!!!");
+            System.exit(0);
         } else if (decision == 0) {
             System.out.println("You have refused the offer.");
         } else {
@@ -88,6 +89,7 @@ public class DealOrNoDeal {
             System.out.println("You have taken the DEAL.");
             System.out.printf("You have won %d dollars.", average);
             System.out.println("CONGRATULATIONS!!!");
+            System.exit(0);
         } else if (decision == 0) {
             System.out.println("You have refused the offer.");
             System.out.println("The game continues");
