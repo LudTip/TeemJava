@@ -243,7 +243,7 @@ public class DealOrNoDeal {
             finalBoxValue = Integer.parseInt(boxes.get(boxChoice));
             boxArray[boxChoice] = "Your Box";
             System.out.println();
-            System.out.printf("You chose box: d%", boxChoice + 1);
+            System.out.printf("You chose box: %d", boxChoice + 1);
             System.out.println("This is your box.");
             System.out.println("The value inside of it will be your final prize if no Deal is made");
             System.out.println();
