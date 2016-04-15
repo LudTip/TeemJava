@@ -130,12 +130,12 @@ public class DealOrNoDeal {
     public static int GetBox(int index3) {
         if (control == 0) {
 
-            System.out.printf("\n%s56\n", "* * * * * * * * * * * * * * * * * * * * * * *");
-            System.out.printf("\n%s46\n", "Pick a box from 1 to 21: ");
+            System.out.printf("\n%s\n", "* * * * * * * * * * * * * * * * * * * * * * *");
+            System.out.printf("\n%s\n", "Pick a box from 1 to 21: ");
             control++;
         } else {
             System.out.println();
-            System.out.printf("\n%s47\n", "Choose a box to open:  ");
+            System.out.printf("\n%s\n", "Choose a box to open:  ");
         }
 
         while (true) {
@@ -146,9 +146,9 @@ public class DealOrNoDeal {
 
             } catch (IllegalArgumentException iae) {
                 index3 = 100;
-                System.out.printf("\n%s42\n", "Invalid input! ");
-                System.out.printf("\n%s45\n", "Enter box number again!");
-                System.out.printf("\n%s33\n", " ");
+                System.out.printf("\n%s\n", "Invalid input! ");
+                System.out.printf("\n%s\n", "Enter box number again!");
+                System.out.printf("\n%s\n", " ");
             }
 
         }
@@ -156,9 +156,9 @@ public class DealOrNoDeal {
 
         int proverka = index3;
         while ((proverka < 0) || (proverka > 20)) {
-            System.out.printf("\n%s42\n", "Invalid input! ");
-            System.out.printf("\n%s45\n", "Enter box number again!");
-            System.out.printf("\n%s33\n", " ");
+            System.out.printf("\n%s\n", "Invalid input! ");
+            System.out.printf("\n%s\n", "Enter box number again!");
+            System.out.printf("\n%s\n", " ");
 
             while (true) {
                 try {
@@ -168,9 +168,9 @@ public class DealOrNoDeal {
 
                 } catch (IllegalFormatException IFE) {
                     index3 = 100;
-                    System.out.printf("\n%s42\n", "Invalid input! ");
-                    System.out.printf("\n%s45\n", "Enter box number again!");
-                    System.out.printf("\n%s33\n", " ");
+                    System.out.printf("\n%s\n", "Invalid input! ");
+                    System.out.printf("\n%s\n", "Enter box number again!");
+                    System.out.printf("\n%s\n", " ");
 
                 }
             }
@@ -185,16 +185,16 @@ public class DealOrNoDeal {
         try {
             box1 = GetBox(index3);
             if (boxChoice == box1) {
-                System.out.printf("\n%s34\n", "*");
-                System.out.printf("%s46", "You cannot open your box!");
-                System.out.printf("\n%s34\n", "*");
+                System.out.printf("\n%s\n", "*");
+                System.out.printf("%s", "You cannot open your box!");
+                System.out.printf("\n%s\n", "*");
                 OpenBox(index3, boxes, boxarray);
             }
 
             if (boxChoice != box1) {
                 boxarray[box1] = "x";
                 System.out.println();
-                System.out.printf("%s37%d :   %d$", "You opened box ", box1 + 1, boxes.get(box1));
+                System.out.printf("%s %d :   %d$", "You opened box ", box1 + 1, boxes.get(box1));
                 removeValue = boxes.get(box1);
             }
 
@@ -206,8 +206,8 @@ public class DealOrNoDeal {
             }
             boxes.remove(box1);
         } catch (IllegalFormatException IFE) {
-            System.out.printf("%s46", "Invalid input!");
-            System.out.printf("%s46", "Enter box number again!");
+            System.out.printf("%s", "Invalid input!");
+            System.out.printf("%s", "Enter box number again!");
             System.out.println();
         }
     }
@@ -264,35 +264,35 @@ public class DealOrNoDeal {
 
         Game1(index3, boxes);
         System.out.println();
-        System.out.printf("%50s\n", "-The game continues!-");
-        System.out.printf("\n%40s\n\n", "*");
+        System.out.printf("%s\n", "-The game continues!-");
+        System.out.printf("\n%s\n\n", "*");
 
         Game1(index3, boxes);
 
         System.out.println();
-        System.out.printf("%37s\n", "Game Over");
+        System.out.printf("%s\n", "Game Over");
         System.out.println();
-        System.out.printf("%46s\n", "That was the final offer");
+        System.out.printf("%s\n", "That was the final offer");
         System.out.println();
-        System.out.printf("%51s\n", "Now let's see what is in your box!");
-        System.out.printf("\n%34s\n%34s\n%34s\n\n", "*", "*", "*");
+        System.out.printf("%s\n", "Now let's see what is in your box!");
+        System.out.printf("\n%s\n%s\n%s\n\n", "*", "*", "*");
 
-        System.out.printf("%45s%n", "Type 1 to open!");
-        System.out.printf("%39s", " ");
+        System.out.printf("%s%n", "Type 1 to open!");
+        System.out.printf("%s", " ");
 
         scan.nextInt();
 
         System.out.printf("\n\n\n\n\n\n\n");
-        System.out.printf("%43s\n", "Your box contains:");
+        System.out.printf("%s\n", "Your box contains:");
 
         System.out.printf("\n\n\n\n");
 
-        System.out.printf("\n%35s\n%35s\n%35s\n\n", ".",".",".");
+        System.out.printf("\n%s\n%s\n%s\n\n", ".",".",".");
         System.out.println();
         System.out.println();
 
 
-        System.out.printf("%36d\n", finalBoxValue);
+        System.out.printf("%d\n", finalBoxValue);
 
         System.out.println();
         System.out.println();
@@ -303,4 +303,3 @@ public class DealOrNoDeal {
     }
 
 }
-
