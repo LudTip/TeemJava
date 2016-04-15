@@ -90,7 +90,7 @@ public class DealOrNoDeal {
             System.out.println("You have refused the offer.");
             System.out.println("The game continues");
         } else {
-            System.out.println("Incorect input");
+            System.out.println("Incorrect input");
             tempProverka = 1;
             Game(index3, boxes);
         }
@@ -112,16 +112,16 @@ public class DealOrNoDeal {
 
         System.out.println("___________________________________________________________________");
         System.out.println();
-        System.out.printf("[%s10] [%s15] [%s20]%n",boxarray[0],boxarray[20],boxarray[10]);
-        System.out.printf("[%s10] [%s15]%n",boxarray[1],boxarray[11]);
-        System.out.printf("[%s10] [%s15]%n",boxarray[2],boxarray[20]);
-        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[3],valuesArray[0],valuesArray[5],valuesArray[10],valuesArray[15],boxarray[13]);
-        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[4],valuesArray[1],valuesArray[6],valuesArray[11],valuesArray[16],boxarray[14]);
-        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[5],valuesArray[2],valuesArray[7],valuesArray[12],valuesArray[17],boxarray[15]);
-        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[6],valuesArray[3],valuesArray[8],valuesArray[13],valuesArray[18],boxarray[16]);
-        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[7],valuesArray[4],valuesArray[9],valuesArray[14],valuesArray[19],boxarray[17]);
-        System.out.printf("[%s10] [%s15]%n",boxarray[8],boxarray[18]);
-        System.out.printf("[%s10] [%s15] [%s20]%n",boxarray[9],valuesArray[20],boxarray[19]);
+        System.out.printf("[%s] [%s] [%s]%n",boxarray[0],boxarray[20],boxarray[10]);
+        System.out.printf("[%s] [%s]%n",boxarray[1],boxarray[11]);
+        System.out.printf("[%s] [%s]%n",boxarray[2],boxarray[20]);
+        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[3],valuesArray[0],valuesArray[5],valuesArray[10],valuesArray[15],boxarray[13]);
+        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[4],valuesArray[1],valuesArray[6],valuesArray[11],valuesArray[16],boxarray[14]);
+        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[5],valuesArray[2],valuesArray[7],valuesArray[12],valuesArray[17],boxarray[15]);
+        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[6],valuesArray[3],valuesArray[8],valuesArray[13],valuesArray[18],boxarray[16]);
+        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[7],valuesArray[4],valuesArray[9],valuesArray[14],valuesArray[19],boxarray[17]);
+        System.out.printf("[%s] [%s]%n",boxarray[8],boxarray[18]);
+        System.out.printf("[%s] [%s] [%s]%n",boxarray[9],valuesArray[20],boxarray[19]);
         System.out.println();
         System.out.printf("___________________________________________________________________");
     }
@@ -303,3 +303,4 @@ public class DealOrNoDeal {
     }
 
 }
+
