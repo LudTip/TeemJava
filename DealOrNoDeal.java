@@ -37,6 +37,7 @@ public class DealOrNoDeal {
             tempProverka = 0;
         }
         int decision = scan.nextInt();
+        scan.nextLine();
 
         if (decision == 1) {
             System.out.println("You have taken the DEAL.");
@@ -81,6 +82,7 @@ public class DealOrNoDeal {
             tempProverka = 0;
         }
         int decision = scan.nextInt();
+        scan.nextLine();
 
         if (decision == 1) {
             System.out.println("You have taken the DEAL.");
