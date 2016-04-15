@@ -116,18 +116,15 @@ public class DealOrNoDeal {
 
         System.out.println("___________________________________________________________________");
         System.out.println();
-        System.out.printf("[%s] [%s] [%s]%n",boxarray[0],boxarray[20],boxarray[10]);
-        System.out.printf("[%s] [%s]%n",boxarray[1],boxarray[11]);
-        System.out.printf("[%s] [%s]%n",boxarray[2],boxarray[20]);
-        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[3],valuesArray[0],valuesArray[5],valuesArray[10],valuesArray[15],boxarray[13]);
-        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[4],valuesArray[1],valuesArray[6],valuesArray[11],valuesArray[16],boxarray[14]);
-        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[5],valuesArray[2],valuesArray[7],valuesArray[12],valuesArray[17],boxarray[15]);
-        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[6],valuesArray[3],valuesArray[8],valuesArray[13],valuesArray[18],boxarray[16]);
-        System.out.printf("[%s] [%s] [%s] [%s] [%s] [%s]%n",boxarray[7],valuesArray[4],valuesArray[9],valuesArray[14],valuesArray[19],boxarray[17]);
-        System.out.printf("[%s] [%s]%n",boxarray[8],boxarray[18]);
-        System.out.printf("[%s] [%s] [%s]%n",boxarray[9],valuesArray[20],boxarray[19]);
+        System.out.printf("[%s] [%s] [%s]   [%s] [%s] [%s]%n", boxarray[0], boxarray[1], boxarray[2],valuesArray[0],valuesArray[2],valuesArray[4]);
+        System.out.printf("[%s] [%s] [%s]   [%s] [%s] [%s]%n", boxarray[3], boxarray[4], boxarray[5],valuesArray[6],valuesArray[8],valuesArray[10]);
+        System.out.printf("[%s] [%s] [%s]   [%s] [%s] [%s]%n", boxarray[6], boxarray[7], boxarray[8],valuesArray[12],valuesArray[14],valuesArray[16]);
+        System.out.printf("[%s] [%s] [%s]   [%s] [%s] [%s]%n", boxarray[9], boxarray[10], boxarray[11],valuesArray[18],valuesArray[20],valuesArray[1]);
+        System.out.printf("[%s] [%s] [%s]   [%s] [%s] [%s]%n", boxarray[12], boxarray[13], boxarray[14],valuesArray[3],valuesArray[5],valuesArray[7]);
+        System.out.printf("[%s] [%s] [%s]   [%s] [%s] [%s]%n", boxarray[15], boxarray[16], boxarray[17],valuesArray[9],valuesArray[11],valuesArray[13]);
+        System.out.printf("[%s] [%s] [%s]   [%s] [%s] [%s]%n", boxarray[18], boxarray[19], boxarray[20],valuesArray[15],valuesArray[17],valuesArray[19]);
         System.out.println();
-        System.out.printf("___________________________________________________________________");
+        System.out.printf("___________________________________________________________________%n");
     }
 
 
