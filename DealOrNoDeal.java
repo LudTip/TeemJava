@@ -84,7 +84,6 @@ public class DealOrNoDeal {
         }
         int decision = scan.nextInt();
         scan.nextLine();
-
         if (decision == 1) {
             System.out.println("You have taken the DEAL.");
             System.out.printf("You have won %d dollars.", average);
@@ -195,17 +194,17 @@ public class DealOrNoDeal {
             if (boxChoice != box1) {
                 boxarray[box1] = "x";
                 System.out.println();
-                System.out.printf("%s %d :   %d$", "You opened box ", box1 + 1, boxes.get(box1));
-                removeValue = boxes.get(box1);
+                System.out.printf("%s %d :   %s$%n", "You opened box", box1 + 1, boxes.get(box1+1));
+                removeValue = boxes.get(box1+1);
             }
 
             for (int i = 0; i < valuesArray.length; i++) {
-                if (removeValue == valuesArray[i]) {
+                if (removeValue.equals(valuesArray[i])) {
                     valuesArray[i] = "";
-                    ////valuesArray[i] = "[XXX]";
+                    valuesArray[i] = "XXX";
                 }
             }
-            boxes.remove(box1);
+            boxes.remove(box1+1);
         } catch (IllegalFormatException IFE) {
             System.out.printf("%s", "Invalid input!");
             System.out.printf("%s", "Enter box number again!");
@@ -230,8 +229,7 @@ public class DealOrNoDeal {
         }
 
         for (int i = 0; i < boxesList.size(); i++) {
-            //boxes.values().(boxesList.get(i).toString());
-            boxes.put(i+1,boxesList.get(i).toString());
+            boxes.put(i + 1, boxesList.get(i).toString());
         }
 
         Printboxes(boxArray);
@@ -244,7 +242,7 @@ public class DealOrNoDeal {
             finalBoxValue = Integer.parseInt(boxes.get(boxChoice));
             boxArray[boxChoice] = "Your Box";
             System.out.println();
-            System.out.printf("You chose box: %d", boxChoice + 1);
+            System.out.printf("You chose box: %d.", boxChoice + 1);
             System.out.println("This is your box.");
             System.out.println("The value inside of it will be your final prize if no Deal is made");
             System.out.println();
@@ -288,7 +286,7 @@ public class DealOrNoDeal {
 
         System.out.printf("\n\n\n\n");
 
-        System.out.printf("\n%s\n%s\n%s\n\n", ".",".",".");
+        System.out.printf("\n%s\n%s\n%s\n\n", ".", ".", ".");
         System.out.println();
         System.out.println();
 
