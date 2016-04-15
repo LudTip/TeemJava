@@ -1,5 +1,5 @@
 package com.company;
-import java.security.KeyException;
+
 import java.util.*;
 
 public class DealOrNoDeal {
@@ -99,8 +99,8 @@ public class DealOrNoDeal {
     public static int Offer(TreeMap<Integer, String> boxes) {
         average = 0;
         for (Map.Entry<Integer, String> entry : boxes.entrySet()) {
-            String key = entry.getValue();
-            average += Integer.parseInt(key);
+            String value = entry.getValue();
+            average += Integer.parseInt(value);
         }
         average /= boxes.size();
         System.out.println("Time to call the banker");
@@ -112,30 +112,30 @@ public class DealOrNoDeal {
 
         System.out.println("___________________________________________________________________");
         System.out.println();
-        System.out.println("{0,-10}{1,25}{2,32}", "[" + boxarray[0] + "]", "[" + boxarray[20] + "]", "[" + boxarray[10] + "]");
-        System.out.println("{0,-10}{1,57}", "[" + boxarray[1] + "]", "[" + boxarray[11] + "]");
-        System.out.println("{0,-10}{1,57}", "[" + boxarray[2] + "]", "[" + boxarray[12] + "]");
-        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[3] + "]", valuesArray[0], valuesArray[5], valuesArray[10], valuesArray[15], "[" + boxarray[13] + "]");
-        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[4] + "]", valuesArray[1], valuesArray[6], valuesArray[11], valuesArray[16], "[" + boxarray[14] + "]");
-        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[5] + "]", valuesArray[2], valuesArray[7], valuesArray[12], valuesArray[17], "[" + boxarray[15] + "]");
-        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[6] + "]", valuesArray[3], valuesArray[8], valuesArray[13], valuesArray[18], "[" + boxarray[16] + "]");
-        System.out.println("{0,-10}{1,10}{2,10}{3,10}{4,10}{5,17}", "[" + boxarray[7] + "]", valuesArray[4], valuesArray[9], valuesArray[14], valuesArray[19], "[" + boxarray[17] + "]");
-        System.out.println("{0,-10}{1,57}", "[" + boxarray[8] + "]", "[" + boxarray[18] + "]");
-        System.out.println("{0,-10}{1,26}{2,31}", "[" + boxarray[9] + "]", valuesArray[20], "[" + boxarray[19] + "]");
+        System.out.printf("[%s10] [%s15] [%s20]%n",boxarray[0],boxarray[20],boxarray[10]);
+        System.out.printf("[%s10] [%s15]%n",boxarray[1],boxarray[11]);
+        System.out.printf("[%s10] [%s15]%n",boxarray[2],boxarray[20]);
+        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[3],valuesArray[0],valuesArray[5],valuesArray[10],valuesArray[15],boxarray[13]);
+        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[4],valuesArray[1],valuesArray[6],valuesArray[11],valuesArray[16],boxarray[14]);
+        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[5],valuesArray[2],valuesArray[7],valuesArray[12],valuesArray[17],boxarray[15]);
+        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[6],valuesArray[3],valuesArray[8],valuesArray[13],valuesArray[18],boxarray[16]);
+        System.out.printf("[%s10] [%s15] [%s20] [%s25] [%s30] [%s35]%n",boxarray[7],valuesArray[4],valuesArray[9],valuesArray[14],valuesArray[19],boxarray[17]);
+        System.out.printf("[%s10] [%s15]%n",boxarray[8],boxarray[18]);
+        System.out.printf("[%s10] [%s15] [%s20]%n",boxarray[9],valuesArray[20],boxarray[19]);
         System.out.println();
-        System.out.println("___________________________________________________________________");
+        System.out.printf("___________________________________________________________________");
     }
 
 
     public static int GetBox(int index3) {
         if (control == 0) {
 
-            System.out.println("\n{0,56}\n", "* * * * * * * * * * * * * * * * * * * * * * *");
-            System.out.println("{0,46}", "Pick a box from 1 to 21: ");
+            System.out.printf("\n%s56\n", "* * * * * * * * * * * * * * * * * * * * * * *");
+            System.out.printf("\n%s46\n", "Pick a box from 1 to 21: ");
             control++;
         } else {
             System.out.println();
-            System.out.println("{0,47}", "Choose a box to open:  ");
+            System.out.printf("\n%s47\n", "Choose a box to open:  ");
         }
 
         while (true) {
@@ -144,11 +144,11 @@ public class DealOrNoDeal {
                 index3 = Integer.parseInt(scan.nextLine());
                 break;
 
-            } catch (FormatException) {
+            } catch (IllegalArgumentException iae) {
                 index3 = 100;
-                System.out.println("{0,42}", "Invalid input! ");
-                System.out.println("{0,45}", "Enter box number again!");
-                System.out.print("{0,33}", " ");
+                System.out.printf("\n%s42\n", "Invalid input! ");
+                System.out.printf("\n%s45\n", "Enter box number again!");
+                System.out.printf("\n%s33\n", " ");
             }
 
         }
@@ -156,9 +156,9 @@ public class DealOrNoDeal {
 
         int proverka = index3;
         while ((proverka < 0) || (proverka > 20)) {
-            System.out.println("{0,42}", "Invalid input! ");
-            System.out.println("{0,45}", "Enter box number again!");
-            System.out.print("{0,33}", " ");
+            System.out.printf("\n%s42\n", "Invalid input! ");
+            System.out.printf("\n%s45\n", "Enter box number again!");
+            System.out.printf("\n%s33\n", " ");
 
             while (true) {
                 try {
@@ -166,11 +166,11 @@ public class DealOrNoDeal {
                     index3 = Integer.parseInt(scan.nextLine());
                     break;
 
-                } catch (FormatException) {
+                } catch (IllegalFormatException IFE) {
                     index3 = 100;
-                    System.out.println("{0,42}", "Invalid input! ");
-                    System.out.println("{0,45}", "Enter box number again!");
-                    System.out.print("{0,33}", " ");
+                    System.out.printf("\n%s42\n", "Invalid input! ");
+                    System.out.printf("\n%s45\n", "Enter box number again!");
+                    System.out.printf("\n%s33\n", " ");
 
                 }
             }
@@ -180,7 +180,7 @@ public class DealOrNoDeal {
         return index3;
     }
 
-    public static void OpenBox(int index3, HashMap<Integer, String> boxes, String[] boxarray) {
+    public static void OpenBox(int index3, TreeMap<Integer, String> boxes, String[] boxarray) {
         int box1 = 0;
         try {
             box1 = GetBox(index3);
@@ -205,7 +205,7 @@ public class DealOrNoDeal {
                 }
             }
             boxes.remove(box1);
-        } catch (KeyException ke) {
+        } catch (IllegalFormatException IFE) {
             System.out.printf("%s46", "Invalid input!");
             System.out.printf("%s46", "Enter box number again!");
             System.out.println();
@@ -229,15 +229,17 @@ public class DealOrNoDeal {
         }
 
         for (int i = 0; i < boxesList.size(); i++) {
-            boxes.values().add(boxesList.get(i).toString());
+            //boxes.values().(boxesList.get(i).toString());
+            boxes.put(i+1,boxesList.get(i).toString());
         }
+
         Printboxes(boxArray);
         System.out.println();
         System.out.println("Time to choose a box!");
         int finalBoxValue = 0;
 
         try {
-            boxChoice = getBox(index3);
+            boxChoice = GetBox(index3);
             finalBoxValue = Integer.parseInt(boxes.get(boxChoice));
             boxArray[boxChoice] = "Your Box";
             System.out.println();
@@ -245,7 +247,7 @@ public class DealOrNoDeal {
             System.out.println("This is your box.");
             System.out.println("The value inside of it will be your final prize if no Deal is made");
             System.out.println();
-        } catch (KeyNotFoundException) {
+        } catch (IllegalArgumentException IAE) {
             System.out.println();
             System.out.println("Box already opened! ");
             System.out.println("Try Again!");
@@ -255,21 +257,15 @@ public class DealOrNoDeal {
         }
 
         Game(index3, boxes);
-        Console.Clear();
         Game(index3, boxes);
-        Console.Clear();
         Game(index3, boxes);
-        Console.Clear();
         Game(index3, boxes);
-        Console.Clear();
         Game(index3, boxes);
-        Console.Clear();
 
         Game1(index3, boxes);
         System.out.println();
         System.out.printf("%50s\n", "-The game continues!-");
         System.out.printf("\n%40s\n\n", "*");
-        Console.Clear();
 
         Game1(index3, boxes);
 
@@ -286,13 +282,12 @@ public class DealOrNoDeal {
 
         scan.nextInt();
 
-        Console.Clear();
         System.out.printf("\n\n\n\n\n\n\n");
         System.out.printf("%43s\n", "Your box contains:");
 
         System.out.printf("\n\n\n\n");
 
-        System.out.printf("\n%35s\n%35s\n%35s\n\n", ".");
+        System.out.printf("\n%35s\n%35s\n%35s\n\n", ".",".",".");
         System.out.println();
         System.out.println();
 
@@ -306,4 +301,5 @@ public class DealOrNoDeal {
         scan.nextLine();
 
     }
+
 }
