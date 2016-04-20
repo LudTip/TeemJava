@@ -277,7 +277,6 @@ public class DealOrNoDeal {
         System.out.printf("%s\n", "Your box contains:");
 
         System.out.printf("%d\n", finalBoxValue);
-                                ");
         System.out.println("Press Enter to exit");
         scan.nextLine();
 
