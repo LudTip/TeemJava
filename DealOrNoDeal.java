@@ -267,35 +267,17 @@ public class DealOrNoDeal {
         System.out.printf("\n%s\n\n", "*");
 
         Game1(index3, boxes);
-
-        System.out.println();
         System.out.printf("%s\n", "Game Over");
-        System.out.println();
         System.out.printf("%s\n", "That was the final offer");
-        System.out.println();
         System.out.printf("%s\n", "Now let's see what is in your box!");
-        System.out.printf("\n%s\n%s\n%s\n\n", "*", "*", "*");
-
         System.out.printf("%s%n", "Type 1 to open!");
         System.out.printf("%s", " ");
 
         scan.nextInt();
-
-        System.out.printf("\n\n\n\n\n\n\n");
         System.out.printf("%s\n", "Your box contains:");
 
-        System.out.printf("\n\n\n\n");
-
-        System.out.printf("\n%s\n%s\n%s\n\n", ".", ".", ".");
-        System.out.println();
-        System.out.println();
-
-
         System.out.printf("%d\n", finalBoxValue);
-
-        System.out.println();
-        System.out.println();
-        System.out.printf("\n\n\n\n\n\n\n                                     ");
+                                ");
         System.out.println("Press Enter to exit");
         scan.nextLine();
 
